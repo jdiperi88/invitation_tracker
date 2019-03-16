@@ -11,7 +11,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
     "db:init": "createdb invitation_db",
     "db:restart": "dropdb --if-exists",
-    "heroku-postbuild": "npm run db:restart &&  NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "heroku pg:reset DATABASE &&  NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "webhook": "./sendgrid_webhook.sh"
   },
   "author": "",
