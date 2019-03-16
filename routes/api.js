@@ -17,6 +17,10 @@ Router.post("/surveys/webhooks", (req, res) => {
   const events = _.map(req.body, event => {
     const pathname = new URL(event.url).pathname;
     const p = new Path("/api/surveys/:surveyId/:choice");
+    console.log("REQ BODY");
+    console.log(req.body);
+    console.log("EVENT");
+    console.log(event);
     console.log(p.test(pathname));
     res.json(p);
   });
