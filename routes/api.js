@@ -30,7 +30,7 @@ Router.post("/surveys/webhooks", (req, res) => {
           email: event.email,
           name: nameHashMap(event.email),
           responded: responded.choice,
-          survey_schema_id: responded.surveyId
+          surveySchemaId: responded.surveyId
         });
         console.log(recipient);
         return res.json(p);
