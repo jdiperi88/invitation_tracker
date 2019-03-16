@@ -26,13 +26,31 @@ Router.post("/surveys/webhooks", (req, res) => {
         console.log(event);
         console.log(p.test(pathname));
         const responded = p.test(pathname);
-        let recipient = await Recipient.create({
-          email: event.email,
-          name: nameHashMap(event.email),
-          responded: responded.choice,
-          surveySchemaId: responded.surveyId
+        let existingUser = Recipient.findOne({
+          where: {
+            email: event.email
+          }
         });
-        console.log(recipient);
+        if (existingUser) {
+          let recipient = Recipient.update(
+            { responded: responded.choice },
+            {
+              where: {
+                email: event.email
+              }
+            }
+          );
+          console.log(recipient);
+        } else {
+          let recipient = await Recipient.create({
+            email: event.email,
+            name: nameHashMap(event.email),
+            responded: responded.choice,
+            surveySchemaId: responded.surveyId
+          });
+
+          console.log(recipient);
+        }
         return res.json(p);
       } else {
         res.json("nothing found");
