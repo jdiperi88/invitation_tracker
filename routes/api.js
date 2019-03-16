@@ -16,22 +16,31 @@ Router.get("/current_user", (req, res) => {
 
 Router.post("/surveys/webhooks", (req, res) => {
   const events = _.map(req.body, async event => {
-    const pathname = new URL(event.url).pathname;
-    const p = new Path("/api/surveys/:surveyId/:choice");
-    console.log("REQ BODY");
-    console.log(req.body);
-    console.log("EVENT");
-    console.log(event);
-    console.log(p.test(pathname));
-    const responded = p.test(pathname);
-    let recipient = await Recipient.create({
-      email: event.email,
-      name: nameHashMap(event.email),
-      responded: responded.choice,
-      survey_schema_id: responded.surveyId
-    });
-    console.log(recipient);
-    res.json(p);
+    try {
+      if (event.email) {
+        const pathname = new URL(event.url).pathname;
+        const p = new Path("/api/surveys/:surveyId/:choice");
+        console.log("REQ BODY");
+        console.log(req.body);
+        console.log("EVENT");
+        console.log(event);
+        console.log(p.test(pathname));
+        const responded = p.test(pathname);
+        let recipient = await Recipient.create({
+          email: event.email,
+          name: nameHashMap(event.email),
+          responded: responded.choice,
+          survey_schema_id: responded.surveyId
+        });
+        console.log(recipient);
+        return res.json(p);
+      } else {
+        res.json("nothing found");
+      }
+    } catch (err) {
+      console.log(err);
+      res.json(err);
+    }
   });
 });
 
