@@ -1,6 +1,7 @@
 const express = require("express");
 const Router = express.Router();
 const keys = require("../config/keys");
+const { Survey } = require("../models/index");
 const requireLogin = require("../middleware/requireLogin");
 const requireCredits = require("../middleware/requireCredits");
 const Mailer = require("../services/Mailer");
@@ -28,21 +29,21 @@ Router.post("/surveys", requireLogin, requireCredits, async (req, res) => {
   const { title, subject, body, recipients } = req.body;
   console.log(req.body);
 
-  const survey = new Survey({
+  const survey = await Survey.create({
     title,
     subject,
     body,
-    recipients: recipients.split(",").map(email => ({
-      email: email.trim()
-    })),
+    recipients,
     _user: req.user.id,
     dateSent: Date.now()
   });
+  survey.recipients = recipients.split(",").map(email => ({
+    email: email.trim()
+  }));
   const mailer = new Mailer(survey, surveyTemplate(survey));
   try {
     await mailer.send();
     await survey.save();
-    req.user.credits -= 1;
     const user = await req.user.save();
     res.send(user);
   } catch (err) {

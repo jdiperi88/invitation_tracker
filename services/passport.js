@@ -30,7 +30,7 @@ passport.use(
     async (accessToken, refreshToken, profile, done) => {
       console.log(profile);
       const existingUser = await User.findOne({
-        where: { googleID: profile.id }
+        where: { googleId: profile.id }
       });
       if (existingUser) {
         //we already have that user
@@ -41,7 +41,10 @@ passport.use(
         return done(null, existingUser);
       }
       // since the new user to mongodb is asynch, we need to make sure we chain .then to invoke done once the insertion has been completed.
-      const newUser = await User.create({ googleID: profile.id });
+      const newUser = await User.create({
+        googleId: profile.id,
+        email: profile.emails[0].value
+      });
       done(null, newUser);
     }
   )
