@@ -10,7 +10,7 @@ const _ = require("lodash");
 const Path = require("path-parser");
 const { URL } = require("url");
 Router.get("/current_user", (req, res) => {
-  res.send(req.user);
+  res.json(req.user);
 });
 
 Router.post("/surveys/webhooks", (req, res) => {
@@ -18,14 +18,15 @@ Router.post("/surveys/webhooks", (req, res) => {
     const pathname = new URL(event.url).pathname;
     const p = new Path("/api/surveys/:surveyId/:choice");
     console.log(p.test(pathname));
+    res.json(p);
   });
 });
 
 Router.get("/survey/thanks", (req, res) => {
-  res.send("thanks for voting!");
+  res.json("thanks for voting!");
 });
 
-Router.post("/surveys", requireLogin, requireCredits, async (req, res) => {
+Router.post("/surveys", requireLogin, async (req, res) => {
   const { title, subject, body, recipients } = req.body;
   console.log(req.body);
 
@@ -44,8 +45,7 @@ Router.post("/surveys", requireLogin, requireCredits, async (req, res) => {
   try {
     await mailer.send();
     await survey.save();
-    const user = await req.user.save();
-    res.send(user);
+    res.json(req.user);
   } catch (err) {
     res.status(422).send(err);
   }

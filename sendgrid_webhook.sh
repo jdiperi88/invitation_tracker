@@ -1,5 +1,5 @@
 function localtunnel {
-  lt -s oppskdfjeij343 --port 3000
+  lt -s invitationtracker --port 3000
 }
 until localtunnel; do
 echo "localtunnel server crashed"

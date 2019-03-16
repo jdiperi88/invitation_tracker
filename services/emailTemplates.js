@@ -369,7 +369,9 @@ module.exports = survey => {
     <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
       <tr>
         <td align="center" bgcolor="#004DD9" role="presentation" style="border:none;border-radius:5px;cursor:auto;padding:10px 30px;background:#004DD9;" valign="middle">
-          <a href="https://www.jdiperi.com" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
+          <a href="${keys.redirectDomain}/api/surveys/${
+    survey.id
+  }/attend" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
             Attend
           </a>
         </td>
@@ -411,7 +413,9 @@ module.exports = survey => {
     <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
       <tr>
         <td align="center" bgcolor="#004DD9" role="presentation" style="border:none;border-radius:5px;cursor:auto;padding:10px 30px;background:#004DD9;" valign="middle">
-          <a href="https://www.jdiperi.com" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
+          <a href="${keys.redirectDomain}/api/surveys/${
+    survey.id
+  }/decline" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
             Decline
           </a>
         </td>
