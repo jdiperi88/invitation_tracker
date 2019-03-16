@@ -1,7 +1,7 @@
 const express = require("express");
 const Router = express.Router();
 const keys = require("../config/keys");
-const { Survey } = require("../models/index");
+const { Survey, Recipient } = require("../models/index");
 const requireLogin = require("../middleware/requireLogin");
 const requireCredits = require("../middleware/requireCredits");
 const Mailer = require("../services/Mailer");
@@ -9,12 +9,13 @@ const surveyTemplate = require("../services/emailTemplates");
 const _ = require("lodash");
 const Path = require("path-parser").default;
 const { URL } = require("url");
+const nameHashMap = require("../util/nameHashMap");
 Router.get("/current_user", (req, res) => {
   res.json(req.user);
 });
 
 Router.post("/surveys/webhooks", (req, res) => {
-  const events = _.map(req.body, event => {
+  const events = _.map(req.body, async event => {
     const pathname = new URL(event.url).pathname;
     const p = new Path("/api/surveys/:surveyId/:choice");
     console.log("REQ BODY");
@@ -22,6 +23,14 @@ Router.post("/surveys/webhooks", (req, res) => {
     console.log("EVENT");
     console.log(event);
     console.log(p.test(pathname));
+    const responded = p.test(pathname);
+    let recipient = await Recipient.create({
+      email: event.email,
+      name: nameHashMap(event.email),
+      responded: responded.choice,
+      survey_schema_id: responded.surveyId
+    });
+    console.log(recipient);
     res.json(p);
   });
 });
