@@ -7,7 +7,7 @@ const requireCredits = require("../middleware/requireCredits");
 const Mailer = require("../services/Mailer");
 const surveyTemplate = require("../services/emailTemplates");
 const _ = require("lodash");
-const Path = require("path-parser");
+const Path = require("path-parser").default;
 const { URL } = require("url");
 Router.get("/current_user", (req, res) => {
   res.json(req.user);
