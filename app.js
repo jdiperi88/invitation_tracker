@@ -26,9 +26,7 @@ app.use(passport.session());
 require("./services/passport");
 const authRoutes = require("./routes/auth");
 const apiRoutes = require("./routes/api");
-app.get("/", (req, res) => {
-  res.render("index.html");
-});
+
 app.use("/api", apiRoutes);
 app.use("/auth", authRoutes);
 
