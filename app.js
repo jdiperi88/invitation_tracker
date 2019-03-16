@@ -3,7 +3,7 @@ const keys = require("./config/keys");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
 const bodyParser = require("body-parser");
-
+const { db } = require("./models/index");
 //connecting to the hosted mongodb
 
 const app = express();
@@ -29,7 +29,6 @@ const apiRoutes = require("./routes/api");
 
 app.use("/api", apiRoutes);
 app.use("/auth", authRoutes);
-
 if (process.env.NODE_ENV == "production") {
   // Express will serve up production assets
   //like main.css and main.js
@@ -44,6 +43,8 @@ if (process.env.NODE_ENV == "production") {
 
 const port = process.env.PORT || 3001;
 
-app.listen(port, function() {
-  console.log(`listening ${port}`);
+db.sync().then(function() {
+  app.listen(port, function() {
+    console.log(`listening ${port}`);
+  });
 });
