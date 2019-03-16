@@ -1,14 +1,22 @@
 const Sequelize = require("sequelize");
 const dbName = "invitation_db";
-
-const db = new Sequelize({
-  database: dbName,
-  host: process.env.DATABASE_URL || "localhost",
-  dialect: "postgres",
-  define: {
-    underscored: true
-  }
-});
+let db;
+if (process.env.DATABASE_URL) {
+  db = new Sequelize(process.env.DATABASE_URL, {
+    logging: false,
+    dialectOptions: {
+      ssl: true /* for SSL config since Heroku gives you this out of the box */
+    }
+  });
+} else {
+  db = new Sequelize({
+    database: dbName,
+    dialect: "postgres",
+    define: {
+      underscored: true
+    }
+  });
+}
 
 const Recipient = require("./Recipient")(db, Sequelize);
 const Survey = require("./Survey")(db, Sequelize);
