@@ -10,7 +10,7 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
     "db:init": "createdb invitation_db",
-    "heroku-postbuild": "npm install && db:init && NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "npm install && npm run db:init && NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "webhook": "./sendgrid_webhook.sh"
   },
   "author": "",
