@@ -18,7 +18,7 @@ const Landing = ({ match }) => {
               <a
                 className="myButton"
                 target="__blank"
-                href="https://www.amazon.com/baby-reg/saida-diperi-joseph-diperi-may-2019-newyork/18SXA6N15D8UM "
+                href="https://www.amazon.com/baby-reg/saida-diperi-joseph-diperi-may-2019-newyork/18SXA6N15D8UM"
               >
                 Amazon
               </a>
