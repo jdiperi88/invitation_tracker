@@ -488,6 +488,250 @@ module.exports = survey => {
     <![endif]-->
   
     
+    <div style="Margin:0px auto;max-width:600px;">
+      
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;vertical-align:top;">
+              <!--[if mso | IE]>
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+              
+      <tr>
+    
+          <td
+             class="" style="vertical-align:top;width:600px;"
+          >
+        <![endif]-->
+          
+    <div class="mj-column-per-100 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+      
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+      <tbody>
+        <tr>
+          <td style="vertical-align:top;padding:0px;">
+            
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+      
+          <tr>
+            <td align="center" class="mobile-text-padding" style="font-size:0px;padding:10px 5px 0px 5px;word-break:break-word;">
+              
+    <div style="font-family:'Roboto', sans-serif;font-size:20px;font-weight:600;line-height:1;text-align:center;color:#004DD9;">
+      We are registered at
+    </div>
+  
+            </td>
+          </tr>
+        
+    </table>
+  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    </div>
+  
+        <!--[if mso | IE]>
+          </td>
+        
+      </tr>
+    
+                </table>
+              <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+  
+    
+    <!--[if mso | IE]>
+        </td>
+      </tr>
+    </table>
+    
+    <table
+       align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+    >
+      <tr>
+        <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+    <![endif]-->
+  
+    
+    <div style="Margin:0px auto;max-width:600px;">
+      
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;vertical-align:top;">
+              <!--[if mso | IE]>
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+              
+      <tr>
+    
+          <td
+             class="" style="vertical-align:top;width:150px;"
+          >
+        <![endif]-->
+          
+    <div class="mj-column-per-25 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+      
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+      <tbody>
+        <tr>
+          <td style="vertical-align:top;padding:0px;">
+            
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+      
+    </table>
+  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    </div>
+  
+        <!--[if mso | IE]>
+          </td>
+        
+          <td
+             class="" style="vertical-align:top;width:150px;"
+          >
+        <![endif]-->
+          
+    <div class="mj-column-per-25 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+      
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+      <tbody>
+        <tr>
+          <td style="vertical-align:top;padding:0px;">
+            
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+      
+          <tr>
+            <td align="center" vertical-align="middle" style="font-size:0px;padding:20px 20px 20px 0px;word-break:break-word;">
+              
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+      <tr>
+        <td align="center" bgcolor="#004DD9" role="presentation" style="border:none;border-radius:5px;cursor:auto;padding:10px 30px;background:#004DD9;" valign="middle">
+          <a href="https://www.amazon.com/baby-reg/saida-diperi-joseph-diperi-may-2019-newyork/18SXA6N15D8UM" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
+            Amazon
+          </a>
+        </td>
+      </tr>
+    </table>
+  
+            </td>
+          </tr>
+        
+    </table>
+  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    </div>
+  
+        <!--[if mso | IE]>
+          </td>
+        
+          <td
+             class="" style="vertical-align:top;width:150px;"
+          >
+        <![endif]-->
+          
+    <div class="mj-column-per-25 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+      
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+      <tbody>
+        <tr>
+          <td style="vertical-align:top;padding:0px;">
+            
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+      
+          <tr>
+            <td align="center" vertical-align="middle" style="font-size:0px;padding:20px 0px 20px 20px;word-break:break-word;">
+              
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+      <tr>
+        <td align="center" bgcolor="#004DD9" role="presentation" style="border:none;border-radius:5px;cursor:auto;padding:10px 30px;background:#004DD9;" valign="middle">
+          <a href="https://www.buybuybaby.com/store/giftregistry/viewregistryguest/547282885?eventType=Baby" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
+            Buy Buy Baby
+          </a>
+        </td>
+      </tr>
+    </table>
+  
+            </td>
+          </tr>
+        
+    </table>
+  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    </div>
+  
+        <!--[if mso | IE]>
+          </td>
+        
+          <td
+             class="" style="vertical-align:top;width:150px;"
+          >
+        <![endif]-->
+          
+    <div class="mj-column-per-25 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+      
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+      <tbody>
+        <tr>
+          <td style="vertical-align:top;padding:0px;">
+            
+    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+      
+    </table>
+  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    </div>
+  
+        <!--[if mso | IE]>
+          </td>
+        
+      </tr>
+    
+                </table>
+              <![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+  
+    
+    <!--[if mso | IE]>
+        </td>
+      </tr>
+    </table>
+    
+    <table
+       align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600"
+    >
+      <tr>
+        <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+    <![endif]-->
+  
+    
     <div style="background:#B5E5EF;background-color:#B5E5EF;Margin:0px auto;max-width:600px;">
       
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#B5E5EF;background-color:#B5E5EF;width:100%;">
@@ -608,5 +852,6 @@ module.exports = survey => {
   
     </body>
   </html>
+
 `;
 };
