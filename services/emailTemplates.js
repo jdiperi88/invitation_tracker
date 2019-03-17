@@ -369,7 +369,7 @@ module.exports = survey => {
     <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
       <tr>
         <td align="center" bgcolor="#004DD9" role="presentation" style="border:none;border-radius:5px;cursor:auto;padding:10px 30px;background:#004DD9;" valign="middle">
-          <a href="${keys.redirectDomain}/api/surveys/${
+          <a target="__blank" href="${keys.redirectDomain}/api/surveys/${
     survey.id
   }/attend" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
             Attend
@@ -413,7 +413,7 @@ module.exports = survey => {
     <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
       <tr>
         <td align="center" bgcolor="#004DD9" role="presentation" style="border:none;border-radius:5px;cursor:auto;padding:10px 30px;background:#004DD9;" valign="middle">
-          <a href="${keys.redirectDomain}/api/surveys/${
+          <a target="__blank" href="${keys.redirectDomain}/api/surveys/${
     survey.id
   }/decline" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
             Decline
@@ -617,7 +617,7 @@ module.exports = survey => {
     <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
       <tr>
         <td align="center" bgcolor="#004DD9" role="presentation" style="border:none;border-radius:5px;cursor:auto;padding:10px 30px;background:#004DD9;" valign="middle">
-          <a href="https://www.amazon.com/baby-reg/saida-diperi-joseph-diperi-may-2019-newyork/18SXA6N15D8UM" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
+          <a target="__blank" href="https://www.amazon.com/baby-reg/saida-diperi-joseph-diperi-may-2019-newyork/18SXA6N15D8UM" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
             Amazon
           </a>
         </td>
@@ -659,7 +659,7 @@ module.exports = survey => {
     <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
       <tr>
         <td align="center" bgcolor="#004DD9" role="presentation" style="border:none;border-radius:5px;cursor:auto;padding:10px 30px;background:#004DD9;" valign="middle">
-          <a href="https://www.buybuybaby.com/store/giftregistry/viewregistryguest/547282885?eventType=Baby" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
+          <a target="__blank" href="https://www.buybuybaby.com/store/giftregistry/viewregistryguest/547282885?eventType=Baby" style="background:#004DD9;color:white;font-family:'Roboto', sans-serif;font-size:11px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">
             Buy Buy Baby
           </a>
         </td>
