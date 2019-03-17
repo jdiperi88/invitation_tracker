@@ -8,26 +8,36 @@ import * as actions from "../actions/index";
 import SurveyNew from "./surveys/SurveyNew";
 
 class App extends Component {
-	componentDidMount() {
-		this.props.fetchUser();
-	}
-	render() {
-		return (
-			<div>
-				<Router>
-					<div className="container">
-						<Header />
-						<Route exact path="/" component={Landing} />
-						<Route exact path="/surveys" component={Dashboard} />
-						<Route exact path="/surveys/new" component={SurveyNew} />
-					</div>
-				</Router>
-			</div>
-		);
-	}
+    componentDidMount() {
+        this.props.fetchUser();
+        console.log(this.props);
+    }
+    render() {
+        return (
+            <div className="app-container">
+                <Router>
+                    <div className="container">
+                        <Header />
+                        <Route exact path="/" component={Landing} />
+                        <Route exact path="/surveys" component={Dashboard} />
+                        <Route
+                            exact
+                            path="/surveys/new"
+                            component={SurveyNew}
+                        />
+                        <Route
+                            exact
+                            path="/api/surveys/:id/:decision"
+                            render={props => <Landing {...props} />}
+                        />
+                    </div>
+                </Router>
+            </div>
+        );
+    }
 }
 
 export default connect(
-	null,
-	actions
+    null,
+    actions
 )(App);

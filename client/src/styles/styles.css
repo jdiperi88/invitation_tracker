@@ -1,0 +1,16 @@
+.navigation {
+  background: #84d3ed;
+  padding: 0 10px; }
+
+.landing-page {
+  background-image: url("https://images.all-free-download.com/images/graphiclarge/baby_vector_275721.jpg");
+  width: 100%;
+  background-size: cover;
+  padding-bottom: 57%; }
+  .landing-page h1 {
+    margin: 0;
+    padding-top: 20px;
+    color: navy; }
+
+.app-container {
+  background-image: url("https://farm4.staticflickr.com/3252/5860373684_da8461b0e5.jpg"); }
