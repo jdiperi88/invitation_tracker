@@ -1,26 +1,41 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-padding-bottom-small {
+  padding-bottom: 1.5rem; }
+
+.u-padding-bottom-medium {
+  padding-bottom: 4rem; }
+
+.u-padding-bottom-big {
+  padding-bottom: 8rem; }
 
 .navigation {
-  background: #84d3ed;
+  font-size: 1.5rem;
+  background-image: linear-gradient(to right bottom, #a5f2f3, #4dc5d6);
   padding: 0 10px; }
+  .navigation .nav-wrapper a {
+    font-size: 1.5rem; }
 
 .landing-page {
-  background: #84d3ed;
-  background-image: url("https://images.all-free-download.com/images/graphiclarge/baby_vector_275721.jpg");
-  width: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  padding-bottom: 30%; }
+  background-image: linear-gradient(to right bottom, #ccffff, #0099cc);
+  background-size: cover;
+  background-repeat: no-repeat; }
   .landing-page h1 {
     margin: 0;
     padding-top: 20px;
-    color: navy; }
+    color: navy;
+    font-family: "Great Vibes", cursive; }
   .landing-page h2 {
     color: navy;
     margin: 0;
-    padding: 20px 0; }
+    padding: 20px 0;
+    font-family: "Great Vibes", cursive; }
   .landing-page p {
     color: navy; }
 
@@ -49,7 +64,8 @@
   font-size: 20px;
   padding: 12px 0;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #263666; }
+  text-shadow: 0px 1px 0px #263666;
+  transition: all 0.2s; }
 
 .myButton:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
@@ -59,7 +75,9 @@
   background: -ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
   background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9',GradientType=0);
-  background-color: #0688fa; }
+  background-color: #0688fa;
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .myButton:active {
   position: relative;
@@ -74,7 +92,7 @@
   padding-bottom: 20px; }
 
 .address-container {
-  background-color: rgba(239, 249, 255, 0.7);
+  background-color: rgba(239, 249, 255, 0.3);
   color: navy;
   font-size: 20px;
   padding: 20px 0;
@@ -87,12 +105,11 @@ body {
   background-color: white; }
 
 .app-container {
-  background-image: url("https://farm4.staticflickr.com/3252/5860373684_da8461b0e5.jpg");
   min-height: 100vh; }
 
 .white {
   padding: 30px; }
 
 footer {
-  background: #84d3ed;
-  padding: 5% 0; }
+  background-image: linear-gradient(to right bottom, #a5f2f3, #4dc5d6);
+  padding: 10px 0px; }

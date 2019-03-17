@@ -9,33 +9,37 @@ import SurveyNew from "./surveys/SurveyNew";
 import Footer from "./Footer";
 
 class App extends Component {
-  componentDidMount() {
-    this.props.fetchUser();
-    console.log(this.props);
-  }
-  render() {
-    return (
-      <div className="app-container">
-        <Router>
-          <div className="container">
-            <Header />
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/surveys" component={Dashboard} />
-            <Route exact path="/surveys/new" component={SurveyNew} />
-            <Route
-              exact
-              path="/api/surveys/:id/:decision"
-              render={props => <Landing {...props} />}
-            />
-            <Footer />
-          </div>
-        </Router>
-      </div>
-    );
-  }
+    componentDidMount() {
+        this.props.fetchUser();
+        console.log(this.props);
+    }
+    render() {
+        return (
+            <div className="app-container">
+                <Router>
+                    <div>
+                        <Header />
+                        <Route exact path="/" component={Landing} />
+                        <Route exact path="/surveys" component={Dashboard} />
+                        <Route
+                            exact
+                            path="/surveys/new"
+                            component={SurveyNew}
+                        />
+                        <Route
+                            exact
+                            path="/api/surveys/:id/:decision"
+                            render={props => <Landing {...props} />}
+                        />
+                        <Footer />
+                    </div>
+                </Router>
+            </div>
+        );
+    }
 }
 
 export default connect(
-  null,
-  actions
+    null,
+    actions
 )(App);

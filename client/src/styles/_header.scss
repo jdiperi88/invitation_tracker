@@ -1,4 +1,10 @@
 .navigation {
-    background: rgb(132, 211, 237);
+    font-size: 1.5rem;
+    @include linearGradient($color-secondary-light, $color-secondary-dark);
     padding: 0 10px;
+    .nav-wrapper {
+        a {
+            font-size: 1.5rem;
+        }
+    }
 }

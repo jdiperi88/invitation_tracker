@@ -30,7 +30,7 @@ class Header extends Component {
     }
     render() {
         return (
-            <nav className="navigation">
+            <nav className="navigation u-padding-bottom-medium">
                 <div className="nav-wrapper">
                     <Link
                         to={this.props.auth ? "/surveys" : "/"}
