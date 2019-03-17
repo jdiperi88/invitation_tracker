@@ -10,6 +10,7 @@ const _ = require("lodash");
 const Path = require("path-parser").default;
 const { URL } = require("url");
 const nameHashMap = require("../util/nameHashMap");
+
 Router.get("/current_user", (req, res) => {
   res.json(req.user);
 });
@@ -64,11 +65,11 @@ Router.post("/surveys/webhooks", (req, res) => {
   });
 });
 
-Router.get("/survey/thanks", (req, res) => {
+Router.get("/survey/thanks", requireCredits, (req, res) => {
   res.json("thanks for voting!");
 });
 
-Router.post("/surveys", requireLogin, async (req, res) => {
+Router.post("/surveys", requireLogin, requireCredits, async (req, res) => {
   const { title, subject, body, recipients } = req.body;
   console.log(req.body);
 
