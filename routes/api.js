@@ -31,6 +31,8 @@ Router.post("/surveys/webhooks", (req, res) => {
             email: event.email
           }
         });
+        console.log("existing user");
+        console.log(existingUser);
         if (existingUser) {
           let recipient = Recipient.update(
             { responded: responded.choice },
