@@ -26,7 +26,7 @@ Router.post("/surveys/webhooks", (req, res) => {
         console.log(event);
         console.log(p.test(pathname));
         const responded = p.test(pathname);
-        let existingUser = Recipient.findOne({
+        let existingUser = await Recipient.findOne({
           where: {
             email: event.email
           }
@@ -34,7 +34,7 @@ Router.post("/surveys/webhooks", (req, res) => {
         console.log("existing user");
         console.log(existingUser);
         if (existingUser) {
-          let recipient = Recipient.update(
+          let recipient = await Recipient.update(
             { responded: responded.choice },
             {
               where: {
