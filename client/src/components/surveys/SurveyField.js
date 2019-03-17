@@ -2,13 +2,13 @@
 import React from "react";
 
 export default ({ input, label, meta: { touched, error } }) => {
-	return (
-		<div>
-			<label>{label}</label>
-			<input {...input} />
-			<div className="red-text" style={{ marginBottom: "10px" }}>
-				{touched && error}
-			</div>
-		</div>
-	);
+  return (
+    <div className="white">
+      <label>{label}</label>
+      <input {...input} />
+      <div className="red-text" style={{ marginBottom: "10px" }}>
+        {touched && error}
+      </div>
+    </div>
+  );
 };
