@@ -7,6 +7,7 @@ import Dashboard from "./Dashboard";
 import * as actions from "../actions/index";
 import SurveyNew from "./surveys/SurveyNew";
 import Footer from "./Footer";
+import RecipientsList from "./RecipientsList";
 
 class App extends Component {
     state = {
@@ -28,7 +29,6 @@ class App extends Component {
     }
     render() {
         let { headerOffset, footerOffset, windowHeight } = this.state;
-        console.log(windowHeight);
         return (
             <div className="app-container">
                 <Router>
@@ -65,6 +65,12 @@ class App extends Component {
                             )}
                         />
                         <Footer getOffsetHeight={this.getOffsetHeight} />
+
+                        <Route
+                            exact
+                            path="/recipients"
+                            component={RecipientsList}
+                        />
                     </div>
                 </Router>
             </div>

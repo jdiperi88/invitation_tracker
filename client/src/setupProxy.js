@@ -8,4 +8,5 @@ module.exports = function(app) {
     );
     // app.use(proxy("/api/surveys", { target: "http://localhost:3001" }));
     app.use(proxy("/auth/logout", { target: "http://localhost:3001" }));
+    app.use(proxy("/api/recipients", { target: "http://localhost:3001" }));
 };
