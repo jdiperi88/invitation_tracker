@@ -6,6 +6,9 @@ class Header extends Component {
     componentDidMount() {
         console.log("working");
         console.log(this.props);
+        console.log(this.refs);
+        let { offsetHeight } = this.refs.header;
+        this.props.getOffsetHeight("headerOffset", offsetHeight);
     }
     renderContent() {
         switch (this.props.auth) {
@@ -30,15 +33,12 @@ class Header extends Component {
     }
     render() {
         return (
-            <nav className="navigation u-padding-bottom-medium">
+            <nav ref="header" className="navigation u-padding-bottom-medium">
                 <div className="nav-wrapper">
-                    <Link
-                        to={this.props.auth ? "/surveys" : "/"}
-                        className="left brand-logo"
-                    >
+                    <Link to={"/"} className="left brand-logo">
                         Baby Shower
                     </Link>
-                    <ul id="nav-mobile" className="right">
+                    <ul id="nav-mobile" className="right mobile-hide">
                         {this.renderContent()}
                     </ul>
                 </div>

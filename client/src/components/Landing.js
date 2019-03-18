@@ -1,12 +1,16 @@
 import React from "react";
 
-const Landing = ({ match }) => {
+const Landing = ({ match, headerOffset, footerOffset, windowHeight }) => {
+    console.log(windowHeight);
     return (
         <div
             className="landing-page u-padding-bottom-medium"
-            style={{ textAlign: "center" }}
+            style={{
+                textAlign: "center",
+                minHeight: `${windowHeight - headerOffset - footerOffset}px`
+            }}
         >
-            <h1 className="u-padding-bottom-small">
+            <h1 className="u-padding-bottom-small ">
                 Little Leo's Baby Shower!
             </h1>
             {match.params.decision == "attend" && (

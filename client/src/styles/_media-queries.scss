@@ -1,0 +1,44 @@
+@media only screen and (max-width: 600px) {
+    .landing-page {
+        h1,
+        h2 {
+            font-size: 3rem;
+        }
+    }
+
+    .myButton {
+        width: 40%;
+        font-size: 1.2rem;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-wrapper {
+        // display: flex;
+        // flex-direction: column;
+        // flex-wrap: wrap;
+        // clear: both;
+    }
+
+    .mobile-hide {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .landing-page {
+        h1 {
+            padding-top: 3rem;
+        }
+    }
+}

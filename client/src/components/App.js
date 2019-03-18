@@ -9,17 +9,43 @@ import SurveyNew from "./surveys/SurveyNew";
 import Footer from "./Footer";
 
 class App extends Component {
+    state = {
+        headerOffset: "",
+        footerOffset: "",
+        windowHeight: "",
+        landingPageHeight: ""
+    };
+
+    getOffsetHeight = (property, height) => {
+        this.setState({
+            [property]: height
+        });
+    };
     componentDidMount() {
         this.props.fetchUser();
         console.log(this.props);
+        this.setState({ windowHeight: window.innerHeight });
     }
     render() {
+        let { headerOffset, footerOffset, windowHeight } = this.state;
+        console.log(windowHeight);
         return (
             <div className="app-container">
                 <Router>
                     <div>
-                        <Header />
-                        <Route exact path="/" component={Landing} />
+                        <Header getOffsetHeight={this.getOffsetHeight} />
+                        <Route
+                            exact
+                            path="/"
+                            render={props => (
+                                <Landing
+                                    {...props}
+                                    headerOffset={headerOffset}
+                                    footerOffset={footerOffset}
+                                    windowHeight={windowHeight}
+                                />
+                            )}
+                        />
                         <Route exact path="/surveys" component={Dashboard} />
                         <Route
                             exact
@@ -29,9 +55,16 @@ class App extends Component {
                         <Route
                             exact
                             path="/api/surveys/:id/:decision"
-                            render={props => <Landing {...props} />}
+                            render={props => (
+                                <Landing
+                                    {...props}
+                                    headerOffset={headerOffset}
+                                    footerOffset={footerOffset}
+                                    windowHeight={windowHeight}
+                                />
+                            )}
                         />
-                        <Footer />
+                        <Footer getOffsetHeight={this.getOffsetHeight} />
                     </div>
                 </Router>
             </div>
