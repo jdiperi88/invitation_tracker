@@ -11,5 +11,6 @@ module.exports = (db, Sequelize) =>
     },
     email: Sequelize.STRING,
     name: Sequelize.STRING,
-    responded: Sequelize.STRING
+    responded: Sequelize.STRING,
+    people: Sequelize.INTEGER
   });

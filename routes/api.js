@@ -49,6 +49,7 @@ Router.post("/surveys/webhooks", (req, res) => {
             email: event.email,
             name: nameHashMap(event.email),
             responded: responded.choice,
+            people: 1,
             surveySchemaId: responded.surveyId
           });
 
