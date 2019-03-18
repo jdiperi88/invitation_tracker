@@ -7,6 +7,7 @@ import Dashboard from "./Dashboard";
 import * as actions from "../actions/index";
 import SurveyNew from "./surveys/SurveyNew";
 import Footer from "./Footer";
+import RecipientsList from "./RecipientsList";
 
 class App extends Component {
     state = {
@@ -65,6 +66,12 @@ class App extends Component {
                             )}
                         />
                         <Footer getOffsetHeight={this.getOffsetHeight} />
+
+                        <Route
+                            exact
+                            path="/api/recipients"
+                            component={RecipientsList}
+                        />
                     </div>
                 </Router>
             </div>
