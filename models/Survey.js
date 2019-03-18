@@ -10,17 +10,17 @@
 //   lastResponded: Date
 // });
 module.exports = (db, Sequelize) =>
-    db.define("surveySchema", {
-        id: {
-            type: Sequelize.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-        },
-        title: Sequelize.STRING,
-        body: Sequelize.STRING,
-        subject: Sequelize.STRING,
-        recipients: Sequelize.STRING,
-        responded: Sequelize.BOOLEAN,
-        dateSent: Sequelize.DATE,
-        lastResponded: Sequelize.DATE
-    });
+  db.define("surveySchema", {
+    id: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    title: Sequelize.STRING,
+    body: Sequelize.STRING,
+    subject: Sequelize.STRING,
+    recipients: Sequelize.STRING,
+    responded: Sequelize.BOOLEAN,
+    dateSent: Sequelize.DATE,
+    lastResponded: Sequelize.DATE
+  });
