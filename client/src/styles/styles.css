@@ -15,6 +15,15 @@
 .u-padding-bottom-big {
   padding-bottom: 8rem; }
 
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
 .navigation {
   font-size: 1.5rem;
   background-image: linear-gradient(to right bottom, #a5f2f3, #4dc5d6);
@@ -30,7 +39,13 @@
     margin: 0;
     padding-top: 20px;
     color: navy;
-    font-family: "Great Vibes", cursive; }
+    font-family: "Great Vibes", cursive;
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(0, 0, 128, 0.5) 1px 1px 5px; }
   .landing-page h2 {
     color: navy;
     margin: 0;
@@ -113,3 +128,25 @@ body {
 footer {
   background-image: linear-gradient(to right bottom, #a5f2f3, #4dc5d6);
   padding: 10px 0px; }
+
+@media only screen and (max-width: 600px) {
+  .landing-page h1,
+  .landing-page h2 {
+    font-size: 3rem; }
+  .myButton {
+    width: 40%;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-bottom: 20px; }
+  .button-container {
+    display: flex;
+    flex-direction: column; }
+  .nav .right {
+    display: flex;
+    flex-direction: column; }
+  .mobile-hide {
+    display: none; } }
+
+@media only screen and (max-width: 1200px) {
+  .landing-page h1 {
+    padding-top: 3rem; } }

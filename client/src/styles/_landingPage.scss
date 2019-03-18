@@ -2,14 +2,21 @@
     // background: rgb(132, 211, 237);
     // background-image: url("https://i.pinimg.com/originals/85/6c/3d/856c3de68463370ef8a742d8584c1d97.jpg");
     @include linearGradient($color-primary-light, $color-primary-dark);
+    // min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     // padding-bottom: 30%;
     h1 {
         margin: 0;
         padding-top: 20px;
-        color: navy;
+        color: rgb(0, 0, 128);
         font-family: "Great Vibes", cursive;
+        background-color: #666666;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: rgba(0, 0, 128, 0.5) 1px 1px 5px;
     }
     h2 {
         color: navy;
