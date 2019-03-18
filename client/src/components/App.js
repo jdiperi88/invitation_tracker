@@ -29,7 +29,6 @@ class App extends Component {
     }
     render() {
         let { headerOffset, footerOffset, windowHeight } = this.state;
-        console.log(windowHeight);
         return (
             <div className="app-container">
                 <Router>
@@ -69,7 +68,7 @@ class App extends Component {
 
                         <Route
                             exact
-                            path="/api/recipients"
+                            path="/recipients"
                             component={RecipientsList}
                         />
                     </div>

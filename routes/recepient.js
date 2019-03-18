@@ -1,12 +1,10 @@
-const { Recipient } = require("../models/Recipient");
-// const ensureAuthenticated = require("../middleware/ensureAuthenticated");
+const { Recipient } = require("../models");
+const requireCredits = require("../middleware/requireCredits");
 
 module.exports = app => {
-    app.get("/api/recipients", async (req, res) => {
+    app.get("/api/recipients", requireCredits, async (req, res) => {
         try {
-            let recipients = await Recipient.findAll({
-                raw: true
-            });
+            let recipients = await Recipient.findAll({ raw: true });
             console.log(recipients);
             res.json(recipients);
         } catch (error) {
