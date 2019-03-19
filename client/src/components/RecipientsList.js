@@ -19,9 +19,9 @@ export default class RecipientsList extends Component {
       ? this.state.recipients.reduce(
           (arr, recipient) => {
             if (recipient.responded == "attend") {
-              arr[0] += 1;
+              arr[0] += recipient.people;
             } else {
-              arr[1] += 1;
+              arr[1] += recipient.people;
             }
             return arr;
           },
